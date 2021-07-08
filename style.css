@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Yekan';
+    src: url('./fonts/Yekan-Font-2/Yekan.eot'); /* IE9 Compat Modes */
+    src: url('./fonts/Yekan-Font-2/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./fonts/Yekan-Font-2/Yekan.woff2') format('woff2'), /* Modern Browsers */
+    url('./fonts/Yekan-Font-2/Yekan.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Yekan-Font-2/Yekan.otf') format('opentype'), /* Open Type Font */
+    url('./fonts/Yekan-Font-2/Yekan.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./fonts/Yekan-Font-2/Yekan.svg#Yekan') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Yekan";
+    list-style: none;
+}
+
+:root{
+    --primeryColor : #6d2bd9;
+    --secondaryColor : #ede9fe;
+    --mainWhite: #fff;
+    --mainBack :#222;
+    --mainGray: #7c7c7c;
+    --mainRed : #db2777;
+    --bodyColor : #f6f6f6;
+    --mainSpacing : 0.1rem ;
+    --mainTransition : all 0.3s linear;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--bodyColor);
+}
+.container{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+header{
+    height: 15rem;
+    width: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.todo-input{
+    border:none;
+    width:25rem;
+    padding:0.7rem 8rem;
+    margin-right: 0;
+    border-radius:0.3rem;
+}
+.todo-filter{
+    border:none;
+    padding:0.7rem;
+    cursor: pointer;
+    border-radius:0.3rem;
+}
+.add-todo{
+    border:none;
+    padding:0.7rem;
+    margin-right: 2rem;
+    border-radius:0.3rem;
+    cursor: pointer;
+    color: var(--primeryColor);
+    background-color: var(--mainWhite);
+    font-weight: bold;
+    transition: var(--mainTransition);
+
+}
+.add-todo:hover{
+    background-color: var(--primeryColor);
+    color: var(--mainWhite);
+
+}
+.todo-container{
+    width:25rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.todo{
+    background-color:red;
+    padding: 0.5rem 1rem;
+    border-radius:0.3rem;
+    margin-top:0.5rem;
+    display: flex;
+    justify-content:space-between;
+    background-color: var(--secondaryColor);
+    color: var(--primeryColor)
+}
+.todo-icons{
+    width:3rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.todo-icons i {
+    cursor: pointer;
+}
+.completed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
